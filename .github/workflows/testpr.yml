@@ -62,7 +62,7 @@ jobs:
       run: |
         sudo apt-get install -y libgl1-mesa-dev libglu1-mesa-dev libx11-dev libxi-dev libxmu-dev
 
-    - shell: bash -l {0}
+    - shell: micromamba-shell {0}
       run: |
         conda config --show channels | grep defaults && conda config --remove channels defaults
         conda info
