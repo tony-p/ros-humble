@@ -1,7 +1,8 @@
 on:
   push:
-    paths:
-      - '*.yaml'
+    branches:
+      - main
+      - master
 
 env:
   ROS_VERSION: 2
