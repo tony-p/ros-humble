@@ -1,8 +1,4 @@
-on:
-  push:
-    branches:
-      - main
-      - master
+on: push
 
 env:
   ROS_VERSION: 2
@@ -48,6 +44,8 @@ jobs:
         micromamba-version: '1.5.1-2'
         environment-file: .github/testpr_environment.yml
         init-shell: bash
+    - name: debug echo path
+      run: echo $PATH
 
     - name: Install qemu-user-static (only for linux-aarch64)
       if: matrix.platform == 'linux-aarch64'
